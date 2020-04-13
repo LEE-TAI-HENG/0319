@@ -1,0 +1,20 @@
+---
+title: "HW3"
+author: "李泰亨"
+date: "2020/4/12"
+output: html_document
+---
+```{r}
+summary(mtcars)
+```
+
+```{r}
+hist(mtcars$mpg)
+hist(mtcars$cyl)
+hist(mtcars$hp)
+```
+
+```{r}
+plot(mtcars$hp,mtcars$mpg)
+```
+
