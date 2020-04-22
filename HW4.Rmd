@@ -1,0 +1,65 @@
+---
+title: "107035146 HW4"
+author: "李泰亨"
+date: "2020/4/21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages(c("tidyverse","ggplot2movies",
+                   "nycflights13","odbc",
+                   "weitexl", "openxlsx",
+                   "gapminder", "usethis","pacman"))
+```
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+library(nycflights13)
+library(openxlsx)
+library(gapminder)
+library(ggplot2movies)
+library(writexl)
+```
+
+```{r}
+library(pacman)
+p_load(usethis, tidyverse, nycflights13, openxlsx, gapminder, ggplot2movies, writexl)
+```
+
+```{r}
+library(pacman)
+p_load(ggplot2movies)
+head(movies)
+```
+
+```{r}
+select(movies,title:votes)
+```
+
+```{r}
+select(movies,Action:Short)
+```
+
+```{r}
+movies %>% select(starts_with("r"))
+```
+
+```{r}
+movies %>% select(starts_with("m"))
+```
+
+```{r}
+irisImperial <- iris %>% mutate(Species=toupper(Species),
+                                Sepal.Width=Sepal.Width/2.5,
+                                Sepal.Length=Sepal.Length/2.5,
+                                Petal.Width=Petal.Width/2.5,
+                                Petal.Length=Petal.Length/2.5)
+head(irisImperial)
+```
